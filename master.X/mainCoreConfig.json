@@ -1,0 +1,90 @@
+{
+    "packageName": "Secondary Core",
+    "packageVersion": "1.2.2",
+    "mainDevice": "dsPIC33CH64MP502",
+    "secondaryCoreNumber": "1",
+    "secondaryCoreConfigurations": {
+        "MSI": {
+            "MailboxConfiguration": [
+                {
+                    "RowId": 0,
+                    "Enable": true,
+                    "Protocol": "Protocol A",
+                    "CustomName": "MSI1_ProtocolA",
+                    "BufferSize": 2,
+                    "Direction": "M->S",
+                    "Interrupt": true
+                },
+                {
+                    "RowId": 1,
+                    "Enable": true,
+                    "Protocol": "Protocol B",
+                    "CustomName": "MSI1_ProtocolB",
+                    "BufferSize": 2,
+                    "Direction": "S->M",
+                    "Interrupt": true
+                }
+            ],
+            "BufferUsed": "4",
+            "AvailableBuffer": "28",
+            "ResetConfiguration": {
+                "ResetSecondaryCoreOnMainCoreReset": true,
+                "DisableSecondaryCoreOnSecondaryCoreReset": false
+            }
+        },
+        "Pins": {
+            "PORTA": {
+                "RA0": "Secondary Core1",
+                "RA1": "Main Core",
+                "RA2": "Main Core",
+                "RA3": "Main Core",
+                "RA4": "Main Core"
+            },
+            "PORTB": {
+                "RB0": "Main Core",
+                "RB1": "Main Core",
+                "RB2": "Main Core",
+                "RB3": "Main Core",
+                "RB4": "Main Core",
+                "RB5": "Main Core",
+                "RB6": "Main Core",
+                "RB7": "Main Core",
+                "RB8": "Main Core",
+                "RB9": "Main Core",
+                "RB10": "Main Core",
+                "RB11": "Secondary Core1",
+                "RB12": "Main Core",
+                "RB13": "Main Core",
+                "RB14": "Main Core",
+                "RB15": "Main Core"
+            }
+        },
+        "Clock": {
+            "ClockSource": "FRC Oscillator with Postscaler",
+            "EnableClockSwitching": true,
+            "EnableFailSafeMonitor": true
+        },
+        "WatchdogTimer": {
+            "EnableType": "Software",
+            "ClockSource": "LPRC",
+            "Mode": "Non-Window mode",
+            "WindowWidth": "25",
+            "TimerPostscaler": "1:1048576"
+        },
+        "ICD": {
+            "EmulatorPinPlacement": "Communicate on PGC1 and PGD1"
+        },
+        "I2C": {
+            "AlternateI2C1PinMapping": "I2C1 mapped to SDA1/SCL1 pins"
+        },
+        "SPI": {
+            "SPI1PinMapping": "Secondary SPI1 uses I/O remap (PPS) pins"
+        },
+        "ContextInterrupts": {
+            "S1CTXT1": "OFF",
+            "S1CTXT2": "OFF",
+            "S1CTXT3": "OFF",
+            "S1CTXT4": "OFF"
+        }
+    }
+}

@@ -1,0 +1,1 @@
+ -c -mcpu=$(MP_PROCESSOR_OPTION)  -omf=elf -DXPRJ_default=$(CND_CONF)     -I"C:\msi\sec_core1.X\dist\default\${IMAGE_TYPE}"  -Wa,-g,--no-relax$(MP_EXTRA_AS_POST)  -mdfp="${DFP_DIR}/xc16"C:\msi\master.X\mcc_generated_files\system\src\where_was_i.s

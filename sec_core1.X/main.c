@@ -89,6 +89,6 @@ int main(void) {
         //UART1_Write_Text("Slave main done \r\n");
         LATAbits.LATA0 = !LATAbits.LATA0; 
         LATBbits.LATB11 = !LATBbits.LATB11; 
-        __delay_ms(1000);
+        __delay_ms(100);
     }
 }
